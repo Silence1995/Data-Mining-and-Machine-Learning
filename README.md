@@ -1,10 +1,6 @@
 # Data Mining
 
-###### tags: `Data Mining`
-
-
-
-## :memo: Homework0
+## :memo: Homework_0
 
 ##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)(We will use ¡§March 2017, Taiwan¡¨ )
 
@@ -56,3 +52,54 @@ Distance(Q, C): Distance between Q & C
     4. Noise Removal
     Q = smooth( Q ), C = smooth( C )
     5. Calculate Distance(Q, C) at each step, and compare the difference between original data and transformed data.
+
+## :memo: Homework_1
+
+##### Dataset: same as Homework_0
+You can use the dataset before/after preprocessing
+
+### Tasks:
+- Define three different transaction, and conduct some experiments on the three mining tasks to find association rules 
+- For each task, you should try 
+    - Two discretization methods 
+        - Divided by 10
+        - Divided by 20 
+    - Two algorithms 
+         - [Apriori](http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/)
+         - [Fp-growth](http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/fpgrowth/) 
+
+- For example, I define a transaction is (pm2.5, humidity, temperature) for device_id=74DA3895C538, then the transaction are (20, 64, 35), (42, 76, 28) ...
+
+### Transactions for each task:
+
+#### Task 1: transaction (PM2.5, humidity, temperature)
+
+| PM2.5 | Humidity | Temperature | 
+|:-----:|:--------:|:-----------:|
+|  89.0 |   85.0   |    22.12    | 
+|  88.0 |   85.0   |    22.12    | 
+|  ...  |   ...    |    ...      |
+|  90.0	|   86.0   |    21.87    |
+#### Task 2: transaction (PM2.5, Humidity , Time)
+
+| PM2.5 | Humidity |   Time   |
+|:-----:|:--------:|:--------:|
+|  89.0 |   85.0   | 00:00:00 |
+|  88.0 |   85.0   | 00:10:00 |
+|  ...  |    ...   |    ...   |
+|  90.0 |   86.0   | 00:40:00 |
+#### Task 3: transaction (PM2.5, PM10, PM1)
+
+| PM2.5 |  PM10 |  PM1 | 
+|:-----:|:-----:|:----:|
+|  89.0 | 106.0 | 63.0 | 
+|  88.0 | 106.0 | 62.0 | 
+|  .... | ....  | .... |
+|  90.0	| 108.0	| 64.0 |
+
+
+
+
+
+
+
