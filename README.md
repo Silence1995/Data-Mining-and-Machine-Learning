@@ -4,14 +4,18 @@
 
 ##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)(We will use ¡§March 2017, Taiwan¡¨ )
 
-### 1. Preprocessing Tasks
+### Tasks:
+- you need to do some data preprocessing, and then get some
+basic information about the dataset 
+
+#### Task1 - Preprocessing Tasks
 
 - Remove the anomal records. 
   Ex: value of PM2.5 is 0
 - Remove the sensors with few data.
 - Remove the sensors with few long time gap.
 
-### 2. Data alignment
+#### Task2 - Data alignment
  
 - We require aligned-time data for future works. However, the sensors don¡¦t have a static record time. In order to solve this problem, we can use linear interplolation.
     - Original Data
@@ -25,19 +29,19 @@
   |:-----:|:------:|:-----:|:------:|
   | pm2.5 | 14.286 |   25  | 41.429 | 
 
-### 3. Observation Tasks (Visualization):
+#### Task3 - Visualization:
     
 - Compare different sensors in same time interval.
   ex: Sensor 1 on 8/10 v.s. Sensor 2 on 8/10
 - Plot all sensors on the map and describe the dataset.
 
-### 4. Query Tasks:
+#### Task4 - Query:
 
 - How many sensors are there in the dataset?
 - Which sensor recorded the highest temperature in March? What¡¦s the temperature? And where's the sensor?
 - What were the maximal PM2.5 values of each sensors on 3/5?
 
-### 5. Time Series Data Comparsion Tasks:
+#### Task5 - Time Series Data Comparsion :
 - Choose two sensors to do the following steps.
 Q: Sequence from Sensor 1
 C: Sequence from Sensor 2
@@ -55,8 +59,8 @@ Distance(Q, C): Distance between Q & C
 
 ## :memo: Homework_1
 
-##### Dataset: same as Homework_0
-You can use the dataset before/after preprocessing
+##### Dataset: Same as Homework_0
+You can use the dataset before or after preprocessing
 
 ### Tasks:
 - Define three different transaction, and conduct some experiments on the three mining tasks to find association rules 
@@ -100,6 +104,48 @@ You can use the dataset before/after preprocessing
 
 
 
+## :memo: Homework_2
+
+##### Dataset: Same as Homework_0
+You can use the dataset before or after preprocessing
+
+### Tasks:
+- Turn data into different clusters, and you should use three kinds of clustering methods for this homework in total.
+    - KMeans
+    - Agglomerative Clustering
+    - DBSCAN
 
 
 
+#### Tasks1 - Spatial Clustering:
+- Use geometric information to do clustering. (i.e. lat and lon)
+- Use two kinds of clustering methods and compare the differences
+
+#### Tasks2 - Spatial + PM2.5 Clustering:
+
+- Combine geometric information and PM2.5 data 
+at certain timestamp 
+    - Ex: PM2.5 at 2017/3/10 17:10:00
+- Do clustering
+- Normalize the data and do clustering again.
+- Compare the differences between clustering before normalization and clustering after normalization
+
+#### Tasks3 - Temporal Clustering:
+- Use a static time interval to do clustering.
+    - For example, the sample rate is 1 data / 10 minutes 
+        - New Data
+    
+      |  time |  17:10 | 17:20 |  17:30 |
+      |:-----:|:------:|:-----:|:------:|
+      | pm2.5 | 14.286 |   25  | 41.429 | 
+
+     - We use all data on 03/10, each sensor will have 6 records in 1 hour, so there will have 24(hours)*6 = 144 records
+        - 144-dimension  Data
+
+        |   device_id  |  0 |   1  | 2    | 3    | ... | 143  |
+        |:------------:|:--:|:----:|------|------|-----|------|
+        | 28C2DDDD459E | 18 |  19  | 18.5 | 18.0 | ... | 14.7 |
+        | 28C2DDDD45E6 | 29 | 29.6 | 30.0 | 31.0 | ... | 43.0 |
+        - Do the 144-dimension clustering
+- Use PCA to reduce the dimension, and do clustering again
+- Compare the differences between clustering before PCA and clustering after PCA
