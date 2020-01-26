@@ -1,6 +1,6 @@
 # Data Mining
 
-## :memo: Homework_0
+## :memo: Homework0
 
 ##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)(We will use ¡§March 2017, Taiwan¡¨ )
 
@@ -57,7 +57,7 @@ Distance(Q, C): Distance between Q & C
     Q = smooth( Q ), C = smooth( C )
     5. Calculate Distance(Q, C) at each step, and compare the difference between original data and transformed data.
 
-## :memo: Homework_1
+## :memo: Homework1
 
 ##### Dataset: Same as Homework_0
 You can use the dataset before or after preprocessing
@@ -104,7 +104,7 @@ You can use the dataset before or after preprocessing
 
 
 
-## :memo: Homework_2
+## :memo: Homework2
 
 ##### Dataset: Same as Homework_0
 You can use the dataset before or after preprocessing
@@ -133,13 +133,13 @@ at certain timestamp
 #### Tasks3 - Temporal Clustering:
 - Use a static time interval to do clustering.
     - For example, the sample rate is 1 data / 10 minutes 
-        - New Data
+        - Aligned-time data from Homework0
     
       |  time |  17:10 | 17:20 |  17:30 |
       |:-----:|:------:|:-----:|:------:|
       | pm2.5 | 14.286 |   25  | 41.429 | 
 
-     - We use all data on 03/10, each sensor will have 6 records in 1 hour, so there will have 24(hours)*6 = 144 records
+     - We use all data on 03/10, and each sensor will have 6 records in 1 hour, so there will have 24(hours)*6 = 144 records
         - 144-dimension  Data
 
         |   device_id  |  0 |   1  | 2    | 3    | ... | 143  |
