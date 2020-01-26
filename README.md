@@ -137,15 +137,15 @@ at certain timestamp
     
       |  time |  17:10 | 17:20 |  17:30 |
       |:-----:|:------:|:-----:|:------:|
-      | pm2.5 | 14.286 |   25  | 41.429 | 
+      | pm2.5 | 14.2 |   25  | 41.9 | 
 
      - We use all data on 03/10, and each sensor will have 6 records in 1 hour, so there will have 24(hours)*6 = 144 records
         - 144-dimension  Data
 
-        |   device_id  |  0 |   1  | 2    | 3    | ... | 143  |
-        |:------------:|:--:|:----:|------|------|-----|------|
-        | 28C2DDDD459E | 18 |  19  | 18.5 | 18.0 | ... | 14.7 |
-        | 28C2DDDD45E6 | 29 | 29.6 | 30.0 | 31.0 | ... | 43.0 |
+        |   device_id  |   0  |   1  |   2  |   3  | ... |  143 |
+        |:------------:|:----:|:----:|:----:|:----:|:---:|:----:|
+        | 28C2DDDD459E | 18.0 | 19.0 | 18.5 | 18.0 | ... | 14.7 |
+        | 28C2DDDD45E6 | 29.0 | 29.6 | 30.0 | 31.0 | ... | 43.0 |
         - Do the 144-dimension clustering
 - Use PCA to reduce the dimension, and do clustering again
 - Compare the differences between clustering before PCA and clustering after PCA
