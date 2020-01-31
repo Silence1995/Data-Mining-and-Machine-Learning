@@ -149,3 +149,57 @@ at certain timestamp
         - Do the 144-dimension clustering
 - Use PCA to reduce the dimension, and do clustering again
 - Compare the differences between clustering before PCA and clustering after PCA
+
+## :memo: Homework3
+
+##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)
+    
+- You need to use three-month-data in this homework. (January, February & March 2017)
+- We only need one sensor
+
+
+
+### Tasks:
+- Use historical data to predict the PM2.5 value after 1 hour
+- For example, the sample rate is 1 data / 15 minutes, and we use previous hour to predict the PM2.5 value next hour, the **Input X** and **Output Y** will look like the following 
+
+-  **Input X**:
+
+    | Date_Time | 2017-01-01 08:00:00 | 2017-01-01 08:15:00 | 2017-01-01 08:30:00 | 2017-01-01 08:45:00 |
+    |:---------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|
+    |   PM2.5   |         30.5        |         23.0        |         23.0        |         21.5        |
+
+
+-  **Output Y**:
+
+    | Date_Time | 2017-01-01 09:45:00 |
+    |:---------:|:-------------------:|
+    |   PM2.5   |         17.0        |
+
+- After preprocessing the data into **Input X** and **Output Y**, we randomly split the data into training data and testing data
+
+- Train models and do evaluations
+
+#### Task 1 - Try classification models to predict PM2.5 value
+
+- Descritization
+The output of classification models are categories (labels), you need to encode the Output Y to categories(labels) by using discretization methods
+    - Divided by 10 
+    - Divided by 20
+
+
+- Try following models
+    - K-Nearest-Neighbor
+    - Naive Bayes
+    - Random Forest
+    - Support vector machine (SVC)
+- Evaluation and Comprasion
+
+#### Task 2 - Try regression models to predict PM2.5 value
+
+- Try following models
+    - Bayesian Regression
+    - Decision tree Regression
+    - Support vector machine (SVR)
+
+-  Evaluation and Comprasion 
