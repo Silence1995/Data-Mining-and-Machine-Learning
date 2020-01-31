@@ -1,5 +1,8 @@
 # Data Mining
 
+Package: Pandas, Scikit-Learn, Numpy
+
+
 ## :memo: Homework0
 
 ##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)(We will use March 2017, Taiwan )
