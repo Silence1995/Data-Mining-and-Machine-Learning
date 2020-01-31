@@ -2,7 +2,7 @@
 
 ## :memo: Homework0
 
-##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)(We will use ¡§March 2017, Taiwan¡¨ )
+##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)(We will use March 2017, Taiwan )
 
 ### Tasks:
 - you need to do some data preprocessing, and then get some
@@ -176,9 +176,13 @@ at certain timestamp
     |:---------:|:-------------------:|
     |   PM2.5   |         17.0        |
 
-- After preprocessing the data into **Input X** and **Output Y**, we randomly split the data into training data and testing data
+- After preprocessing the data into **Input X** and **Output Y**, we randomly split the data into 70% training data and 30% testing data
 
 - Train models and do evaluations
+
+
+
+
 
 #### Task 1 - Try classification models to predict PM2.5 value
 
