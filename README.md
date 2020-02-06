@@ -1,11 +1,25 @@
 # Data Mining
 
-Package: Pandas, Scikit-Learn, Numpy
+Package: 
+- pandas
+- scikit-Learn
+- mlxtend
+- numpy
+- scipy
+- folium
+- geopy
+- matplotlib
 
 
 ## :memo: Homework0
 
 ##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)(We will use March 2017, Taiwan )
+- filesize:263MB
+- columns:
+
+|    Date    |   Time   |   device_id  | PM2.5 | PM10 | PM1 | Temperature | Humidity |   lat  |   lon   |
+|:----------:|:--------:|:------------:|:-----:|:----:|:---:|:-----------:|:--------:|:------:|:-------:|
+| 2017-03-01 | 08:00:00 | 74DA388FF5F6 |   41  |  48  |  28 |     20.0    |    89    | 25.059 | 121.499 |
 
 ### Tasks:
 - you need to do some data preprocessing, and then get some
