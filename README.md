@@ -34,7 +34,7 @@ basic information about the dataset
 
 #### Task2 - Data alignment
  
-- We require aligned-time data for future works. However, the sensors don¡¦t have a static record time. In order to solve this problem, we can use linear interplolation.
+- We require aligned-time data for future works. However, the sensors donÂ¡Â¦t have a static record time. In order to solve this problem, we can use linear interplolation.
     - Original Data
     
   | time  | 17:04 | 17:18 | 17:22 | 17:29 | 17:36 |
@@ -50,12 +50,17 @@ basic information about the dataset
     
 - Compare different sensors in same time interval.
   ex: Sensor 1 on 8/10 v.s. Sensor 2 on 8/10
+   <p>
+   <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw0_1.PNG" width="400" height="300" />
+   </p>
 - Plot all sensors on the map and describe the dataset.
-
+    <p>
+      <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw0_2.PNG" width="400" height="300" />
+    </p>
 #### Task4 - Query:
 
 - How many sensors are there in the dataset?
-- Which sensor recorded the highest temperature in March? What¡¦s the temperature? And where's the sensor?
+- Which sensor recorded the highest temperature in March? WhatÂ¡Â¦s the temperature? And where's the sensor?
 - What were the maximal PM2.5 values of each sensors on 3/5?
 
 #### Task5 - Time Series Data Comparsion :
@@ -73,6 +78,10 @@ Distance(Q, C): Distance between Q & C
     4. Noise Removal
     Q = smooth( Q ), C = smooth( C )
     5. Calculate Distance(Q, C) at each step, and compare the difference between original data and transformed data.
+    
+    | Q | C |
+    |:-:|:-:|
+    | <p> <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw0_3.PNG" width="400" height="300" /></p> |<p> <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw0_4.PNG" width="400" height="300" /> </p> |
 
 ## :memo: Homework1
 
@@ -137,7 +146,9 @@ You can use the dataset before or after preprocessing
 #### Tasks1 - Spatial Clustering:
 - Use geometric information to do clustering. (i.e. lat and lon)
 - Use two kinds of clustering methods and compare the differences
-
+  | Kmeans | DBSCAN|
+    |:-:|:-:|
+    | <p> <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_kmeans.PNG" width="300" height="300" /></p> |<p> <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_dbscan.PNG" width="300" height="300" /> </p> |
 #### Tasks2 - Spatial + PM2.5 Clustering:
 
 - Combine geometric information and PM2.5 data 
@@ -147,6 +158,10 @@ at certain timestamp
 - Normalize the data and do clustering again.
 - Compare the differences between clustering before normalization and clustering after normalization
 
+|    | before normalization | after normalization |
+|:--:|:--------------------:|---------------------|
+| 2d |           <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_kmeans2d.PNG" width="300" height="300" />            |              <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_kmeans2d_n.PNG" width="300" height="300" />        |
+| 3d |        <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_kmeans3d.PNG" width="300" height="300" />               |             <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_kmeans3d_n.PNG" width="300" height="300" />         |
 #### Tasks3 - Temporal Clustering:
 - Use a static time interval to do clustering.
     - For example, the sample rate is 1 data / 10 minutes 
@@ -166,7 +181,10 @@ at certain timestamp
         - Do the 144-dimension clustering
 - Use PCA to reduce the dimension, and do clustering again
 - Compare the differences between clustering before PCA and clustering after PCA
-
+| 144-dimension| PCA|
+    |:-:|:-:|
+    | <p> <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_144d.PNG" width="300" height="300" /></p> |<p> <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw2_pca.PNG" width="300" height="300" /> </p> |
+#### Tasks2 - Spatial + PM2.5 Clustering:
 ## :memo: Homework3
 
 ##### Dataset: [AirBox Dataset](https://sites.google.com/site/cclljj/dataset-airbox)
@@ -215,6 +233,9 @@ The output of classification models are categories (labels), you need to encode 
     - Random Forest
     - Support vector machine (SVC)
 - Evaluation and Comprasion
+     <p>
+      <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw3_classification.PNG" width="450" height="450" />
+    </p>
 
 #### Task 2 - Try regression models to predict PM2.5 value
 
@@ -222,5 +243,7 @@ The output of classification models are categories (labels), you need to encode 
     - Bayesian Regression
     - Decision tree Regression
     - Support vector machine (SVR)
-
 -  Evaluation and Comprasion 
+ <p>
+      <img src="https://github.com/Silence1995/Data_Mining/blob/master/figure/hw3_regression.PNG" width="450" height="450" />
+    </p>
