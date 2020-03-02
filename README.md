@@ -1,4 +1,4 @@
-# Data Mining
+# Data Mining & Machine Learning
 
 Package: 
 - pandas
